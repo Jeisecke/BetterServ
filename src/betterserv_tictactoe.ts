@@ -163,7 +163,7 @@ export class TicTacToe {
     async getAIMoves(): Promise<number[] | null> {
         try {
             const num = this.getEncodedBoard();
-            const response = await fetch(`https://tictactoe.responseplan.de/${num}`);
+            const response = await fetch(`https://tictactoe.lutz-pfannenschmidt.de/${num}`);
             if (!response.ok) {
                 logger.error(`Failed to get AI moves, status: ${response.status}`);
                 return null;
