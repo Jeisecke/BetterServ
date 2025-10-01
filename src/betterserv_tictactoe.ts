@@ -76,7 +76,7 @@ export class TicTacToe {
         for (const [i, _] of this.cells.entries()) {
             const cell = document.createElement("div");
             cell.dataset.index = i.toString();
-            cell.onclick = () => this.handleClick(i);
+            cell.addEventListener("click", () => this.handleClick(i));
             grid.appendChild(cell);
         }
 
